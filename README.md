@@ -39,4 +39,4 @@ This project is licensed under the [MIT License](License). You are free to use, 
 
 ## About Me 👨🏽‍💻
 
-I am an IT Specialist with 5 years of experience as a Network Engineer and Administrator. I am learning SQL and many more skills because I aspire to become a Data Engineer and/or Cloud Engineer. I am an IT professional passionate about growth and professional development. This project is part of an SQL course I am taking while studying under Baraa Khatib Salkini. 
+Hello! My name is Richard Alvarez and I am an IT Specialist with 5 years of experience as a Network Engineer and Administrator. I am learning SQL and many more skills because I aspire to become a Data Engineer and/or Cloud Engineer. I am an IT professional passionate about growth and professional development. This project is part of a SQL course I am taking while studying under Baraa Khatib Salkini. 

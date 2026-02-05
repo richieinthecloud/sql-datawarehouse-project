@@ -21,11 +21,11 @@ will be permanently lost. Ensure you have backups or confirmations before execut
 
 -- data ingestion into the bronze layer 
 
---drop table if exists Bronze.crm_cust_info; 
+drop table if exists Bronze.crm_cust_info; 
 create table Bronze.crm_cust_info 
 (
 	cst_id int,
-	cst_key int,
+	cst_key nvarchar(50),
 	cst_firstname nvarchar(50),
 	cst_lastname nvarchar(50),
 	cst_marital_status nvarchar(15),

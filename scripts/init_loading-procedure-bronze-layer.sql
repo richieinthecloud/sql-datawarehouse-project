@@ -12,6 +12,9 @@ BIG WARNING:
 Do not run this procedure unless you are certain the source CSV files are valid and accessible. Ensure file paths are correct
 before execution. Running this in production without proper validation could result in complete data loss in the Bronze layer. 
 Always test in a development environment first.
+
+Requirements: 
+	Bulk insert permissions and file system access to CSV source files
 */
 
 create or alter procedure Bronze.load_bronze as 

@@ -100,8 +100,8 @@ begin
 			case Upper(Trim(prd_line)) 
 				when 'R' then 'Road'
 				when 'S' then 'Other Sales'
-			when 'M' then 'Mountain'
-			when 'T' then 'Touring'
+				when 'M' then 'Mountain'
+				when 'T' then 'Touring'
 			else 'Unrecorded'
 		end as prd_line, -- data enrichment. making it easier to understand 
 		cast(prd_start_dt as date) as prd_start_dt, -- original table was datetime but we only really need date. time provides no value in this instance

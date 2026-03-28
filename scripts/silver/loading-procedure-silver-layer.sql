@@ -254,7 +254,7 @@ begin
 		)
 		select
 			ID,
-			trim(CAT),
+			trim(CAT) as CAT,
 			SUBCAT,
 			MAINTENANCE
 		from bronze.erp_PX_CAT_G1V2

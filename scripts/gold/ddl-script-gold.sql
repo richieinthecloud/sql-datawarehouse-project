@@ -93,22 +93,21 @@ Requirements:
 		GO
 
 		create view gold.fact_sales as
-		select 
-			ROW_NUMBER() over (order by pn.prd_start_dt, pn.prd_key) as product_key, -- Surrogate key
-			pn.prd_id as product_id,
-			pn.prd_key as product_number,
-			pn.prd_nm as product_name, 
-			pn.cat_id as category_id, 
-			px.CAT as category,
-			px.SUBCAT as subcategory,
-			px.MAINTENANCE as maintenance,
-			pn.prd_cost as cost, 
-			pn.prd_line as product_line,
-			pn.prd_start_dt as start_date
-		from silver.crm_prd_info as pn
-		left join silver.erp_PX_CAT_G1V2 as px
-			on pn.cat_id = px.ID
-		where prd_end_dt is null
+		select
+		    sd.sls_ord_num  as order_number,
+		    pr.product_key  as product_key,
+		    cu.customer_key as customer_key,
+		    sd.sls_order_dt as order_date,
+		    sd.sls_ship_dt  as shipping_date,
+		    sd.sls_due_dt   as due_date,
+		    sd.sls_sales    as sales_amount,
+		    sd.sls_quantity as quantity,
+		    sd.sls_price    as price
+		from silver.crm_sales_details sd
+		left join gold.dim_products pr
+   			on sd.sls_prd_key = pr.product_number
+		left join gold.dim_customers cu
+    		on sd.sls_cust_id = cu.customer_id;
 		GO
-
+			
 		print('>> Gold.facts_sales completed!');
